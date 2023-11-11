@@ -1,4 +1,6 @@
 class Car{
+    // this class to all car properties that driving game need
+    // the position, Controls, width, height, and its canvas code on its board
     constructor(x,y,width,height){
         this.x = x ;
         this.y = y; 
@@ -24,24 +26,24 @@ class Car{
             this.speed-=this.acceleration;
         }
 
-        if(this.speed>this.maxSpeed){
+        if(this.speed>this.maxSpeed){ //max speed equal 3 when forward
             this.speed=this.maxSpeed;
         }
-        if(this.speed<-this.maxSpeed/2){
+        if(this.speed<-this.maxSpeed/2){ //max speed equal 1.5 when reverse
             this.speed=-this.maxSpeed/2;
         }
 
-        if(this.speed>0){
+        if(this.speed>0){ //to reduce the car smoothly if the key up when the car is forward  
             this.speed-=this.friction;
         }
-        if(this.speed<0){
+        if(this.speed<0){//to reduce the car smoothly if the key up when the car is reverse  
             this.speed+=this.friction;
         }
-        if(Math.abs(this.speed)<this.friction){
+        if(Math.abs(this.speed)<this.friction){ //stoping the car 
             this.speed=0;
         }
 
-        if(this.speed!=0){
+        if(this.speed!=0){ // became the car move right and lift and foeward and backward synq
             const flip=this.speed>0?1:-1;
             if(this.controls.left){
                 this.angle+=0.03*flip;
@@ -55,9 +57,9 @@ class Car{
         this.y-=Math.cos(this.angle)*this.speed;
     }
     draw(ctx){
-        ctx.save();
-        ctx.translate(this.x,this.y);
-        ctx.rotate(-this.angle);
+        ctx.save(); // save currnt state 
+        ctx.translate(this.x,this.y); //position of car from pint (0,0) -> (x,y) in cancas window
+        ctx.rotate(-this.angle); //rotate the rect. based on movement car from keyboard
 
         ctx.beginPath();
         ctx.rect(

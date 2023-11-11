@@ -11,7 +11,7 @@ animate();
 function animate(){
     car.update();
     
-    Canvas.height=window.innerHeight; // every update car will to updat the innerheight to get good simulate 
+    Canvas.height=window.innerHeight; // every update car place will to updat the innerheight to get good simulate 
     car.draw(ctx);
-    requestAnimationFrame(animate);
+    requestAnimationFrame(animate); // tells browser there is animate happen. repeat and repeat
 }
