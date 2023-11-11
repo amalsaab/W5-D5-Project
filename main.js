@@ -10,7 +10,7 @@ const car = new Car(road.getLaneCenter(2),Canvas.width/2,30,50); // to difine ca
 animate();
 
 function animate(){
-    car.update();
+    car.update(road.borders);
     
     Canvas.height=window.innerHeight; // every update car place will to updat the innerheight to get good simulate 
 
