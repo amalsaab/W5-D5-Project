@@ -1,11 +1,11 @@
 body {
     margin: 0px;
-    background: darkgray;
+    background-color: rgb(255, 255, 255);
     overflow: hidden;
     text-align: center; /* To center the canvas */
 
 }
 
 #myCanvas {
-    background: lightgray;
+    background-color: rgba(0, 0, 0, 0.795);
 }

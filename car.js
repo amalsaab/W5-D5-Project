@@ -62,6 +62,7 @@ class Car{
         ctx.rotate(-this.angle); //rotate the rect. based on movement car from keyboard
 
         ctx.beginPath();
+        ctx.fillStyle = "blue";
         ctx.rect(
             -this.width/2, //to put the car in the middle 
             -this.height/2,
