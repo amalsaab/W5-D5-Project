@@ -28,11 +28,19 @@ const traffic=[
     new Car(road.getLaneCenter(4),-1350,30,50,"DUMMY",3),
     new Car(road.getLaneCenter(0),-1500,30,50,"DUMMY",3.1),
     new Car(road.getLaneCenter(1),-1500,30,50,"DUMMY",3),
-    new Car(road.getLaneCenter(1),-1700,30,50,"DUMMY",3.2),
+    new Car(road.getLaneCenter(2),-1550,30,50,"DUMMY",3),
+    // new Car(road.getLaneCenter(1),-1700,30,50,"DUMMY",3.2),
     new Car(road.getLaneCenter(2),-1700,30,50,"DUMMY",3.3),
     new Car(road.getLaneCenter(4),-1700,30,50,"DUMMY",3.05),
-    new Car(road.getLaneCenter(0),-1800,30,50,"DUMMY",3.4),
+    new Car(road.getLaneCenter(0),-1800,30,50,"DUMMY",3.6),
     new Car(road.getLaneCenter(3),-1900,30,50,"DUMMY",3),
+    new Car(road.getLaneCenter(1),-1950,30,50,"DUMMY",3),
+    new Car(road.getLaneCenter(4),-2000,30,50,"DUMMY",3),
+    new Car(road.getLaneCenter(0),-2100,30,50,"DUMMY",3.2),
+    new Car(road.getLaneCenter(4),-2150,30,50,"DUMMY",3.3),
+    new Car(road.getLaneCenter(3),-2250,30,50,"DUMMY",3.05),
+    new Car(road.getLaneCenter(1),-2300,30,50,"DUMMY",3.4),
+    new Car(road.getLaneCenter(3),-2400,30,50,"DUMMY",3),
 
 
 
