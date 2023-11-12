@@ -52,7 +52,10 @@ function myTimer(){
 }
 function myStopFunction() {
     clearInterval(myInterval);
-    document.body.style.backgroundColor = "green"
+    if (document.body.style.backgroundColor !== "red") {
+        document.body.style.backgroundColor = "green"
+    }
+    
 }
 
 animate();
