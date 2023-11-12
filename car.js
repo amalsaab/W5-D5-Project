@@ -22,18 +22,20 @@ class Car{
     }
     update(roadBorders, traffic){
         if(!this.damaged){
-            this.#move();
-            this.polygon=this.#createPolygon();
-            this.damaged=this.#assessDamage(roadBorders, traffic);
+            this.move();
+            this.polygon=this.createPolygon();
+            this.damaged=this.assessDamage(roadBorders, traffic);
         }else{
-            document.body.style.backgroundColor = "red"
+            if (document.body.style.backgroundColor !== "green") {
+                document.body.style.backgroundColor = "red"
+            }
         }
 
         // if(this.sensor){
         //     this.sensor.update(roadBorders,traffic);
         // }
     }
-    #assessDamage(roadBorders, traffic){
+    assessDamage(roadBorders, traffic){
         for(let i=0;i<roadBorders.length;i++){
             if(polysIntersect(this.polygon,roadBorders[i])){
                 return true;
@@ -46,7 +48,7 @@ class Car{
         }
         return false;
     }
-    #createPolygon(){
+    createPolygon(){
         const points=[];
         const rad=Math.hypot(this.width,this.height)/2;
         const alpha=Math.atan2(this.width,this.height);
@@ -68,7 +70,7 @@ class Car{
         });
         return points;
     }
-    #move(){
+    move(){
         if(this.controls.forward){
             this.speed+=this.acceleration;
         }

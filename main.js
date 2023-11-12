@@ -41,13 +41,6 @@ const traffic=[
     new Car(road.getLaneCenter(3),-2250,30,50,"DUMMY",3.05),
     new Car(road.getLaneCenter(1),-2300,30,50,"DUMMY",3.4),
     new Car(road.getLaneCenter(3),-2400,30,50,"DUMMY",3),
-
-
-
-
-
-
-
     new Car(road.getLaneCenter(3),3290,30,50,"DUMMY",10),
     new Car(road.getLaneCenter(1),6590,30,50,"DUMMY",10),
 ];
