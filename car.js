@@ -25,6 +25,8 @@ class Car{
             this.#move();
             this.polygon=this.#createPolygon();
             this.damaged=this.#assessDamage(roadBorders, traffic);
+        }else{
+            document.body.style.backgroundColor = "red"
         }
 
         // if(this.sensor){
@@ -94,10 +96,10 @@ class Car{
         if(this.speed!=0){ // became the car move right and lift and foeward and backward synq
             const flip=this.speed>0?1:-1;
             if(this.controls.left){
-                this.angle+=0.05*flip;
+                this.angle+=0.04*flip;
             }
             if(this.controls.right){
-                this.angle-=0.05*flip;
+                this.angle-=0.04*flip;
             }
         }
 
